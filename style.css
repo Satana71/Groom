@@ -1,0 +1,292 @@
+*{
+    margin: 0 auto;
+    scroll-behavior: smooth;
+    padding: 0 auto;
+}
+:root{
+    --clr: rgb(0, 0, 0);
+    --txt: 'Titillium Web', sans-serif;  
+    --tclr: rgb(0, 0, 0);
+}
+.container{
+    background-color: var(--clr);
+}
+/* общее */
+/* шапка */
+.intro{
+    width: 100%;
+    height: 750px;
+    background-color: var(--clr);
+    display: flex;
+    justify-content: center;
+}
+#head{
+    position: fixed;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0.267);
+}
+.intro::before{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image:url(img/prevphoto.jpg);
+    content: '';
+    position: fixed;
+    width: 67%;
+    height: 760px;
+    z-index: 1;
+}
+.main{
+    width: 80%;
+    height: 100px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prevphoto{
+    z-index: 1;
+    display: flex;
+}
+/* логотип */
+.logo{
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+}
+/* меню выбора */
+a{
+    text-decoration: none;
+    font-family: var(--txt);
+    color: var(--tclr);
+}
+.a__left{
+    margin-right: 30px;
+}
+.a__right{
+    margin-left: 30px;
+}
+/* основное */
+.wall{
+    width: 67%;
+    height: 1100px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 2;
+    font-family: var(--txt);
+}
+
+
+/* карта */
+.map{
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+
+/* карточки 3D */
+.cardsgroom{
+    z-index: 2;
+    /* background-color: rgb(207, 5, 5); */
+    width: 100%;
+    height: 500px;  
+}
+.center, .centerleft, .centerright, .front-face, .back-face, .contents{
+    position: absolute;
+    z-index: 2;
+}
+.centerleft{
+    top: 27rem;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    height: 25rem;
+    width: 23rem;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+.center{
+    top: 27rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 25rem;
+    width: 23rem;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+.centerright{
+    top: 27rem;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    height: 25rem;
+    width: 23rem;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+.front-face, .back-face{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background:/* linear-gradient(rgba(0, 0, 0, 2), rgba(0, 0, 0, 2)),*/ url(img/boss.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform .7s cubic-bezier(.4, .2, .2, 1);
+}
+.contents{
+    left: 0;
+    top: 50%;
+    width: 100%;
+    perspective: 100px;
+    transform: translateY(-50%) translateZ(60px) scale(.94);
+}
+.front p{
+    color: red;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.front p::after{
+    content: '';
+    display: block;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 100px;
+    background: wheat;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.front span{
+    color: wheat;
+    font-size: 23px;
+}
+.back-face{
+    transform: rotateY(180deg);
+    background:/* linear-gradient(45deg, #e708e7 0%, #033507 100%) */ url(img/ифслищыы.jpg);
+    
+}
+.back{
+    color: white;
+}
+.back h2{
+    font-weight: lighter;
+    font-size: 28px;
+    padding-bottom: 5px;
+}
+.back span{
+    font-size: 25px;
+}
+.centerleft:hover > .back-face{
+    transform: rotateY(0deg);
+}
+.centerleft:hover > .front-face{
+    transform: rotateY(180deg);
+}
+.center:hover > .back-face{
+    transform: rotateY(0deg);
+}
+.center:hover > .front-face{
+    transform: rotateY(180deg);
+}
+.centerright:hover > .back-face{
+    transform: rotateY(0deg);
+}
+.centerright:hover > .front-face{
+    transform: rotateY(180deg);
+}
+
+
+
+/* цитата */
+.mantra{
+    padding: 3rem;
+    max-width: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.motto, .mottotext{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+/* команда */
+.team{
+    margin: auto;
+    max-width: 60%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.teamphoto{
+    padding: 3rem;
+}
+.teambio{
+    font-family: var(--txt);
+}
+.boss{
+    padding: 0.5rem;
+}
+.bossbut{
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    font-family: var(--txt);
+    border: 2px solid black;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+/* фотогалерея */
+.photolibrary{
+    margin: 0 auto;
+    width: 67%;
+    height: 600px;
+    z-index: 2;
+    position: relative;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cardlibrary{
+    padding: 0.5rem;
+    width: 20%;
+    height: 15rem;
+}
+
+
+
+
+
+
+
+/* подвал */
+.footer{
+    z-index: 2;
+}
+/* обратная связь */
+.numberinfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.socialicon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+/* кнопка возврата */
