@@ -7,6 +7,7 @@
     --clr: rgb(0, 0, 0);
     --txt: 'Titillium Web', sans-serif;  
     --tclr: rgb(0, 0, 0);
+    --bcgclr: white;
 }
 .container{
     background-color: var(--clr);
@@ -70,7 +71,7 @@ a{
     width: 67%;
     height: 1100px;
     margin: 0 auto;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--bcgclr);
     position: relative;
     z-index: 2;
     font-family: var(--txt);
@@ -102,8 +103,8 @@ a{
     top: 27rem;
     left: 20%;
     transform: translate(-50%, -50%);
-    height: 25rem;
-    width: 23rem;
+    height: 25%;
+    width: 25%;
     transform-style: preserve-3d;
     perspective: 1000px;
 }
@@ -111,8 +112,8 @@ a{
     top: 27rem;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 25rem;
-    width: 23rem;
+    height: 25%;
+    width: 25%;
     transform-style: preserve-3d;
     perspective: 1000px;
 }
@@ -120,8 +121,8 @@ a{
     top: 27rem;
     left: 80%;
     transform: translate(-50%, -50%);
-    height: 25rem;
-    width: 23rem;
+    height: 25%;
+    width: 25%;
     transform-style: preserve-3d;
     perspective: 1000px;
 }
@@ -249,7 +250,7 @@ a{
     height: 600px;
     z-index: 2;
     position: relative;
-    background-color: white;
+    background-color: var(--bcgclr);
     display: flex;
     align-items: center;
     justify-content: center;
